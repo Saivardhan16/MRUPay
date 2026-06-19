@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 package org.phonepe.phonepaywallet.dto;
 
 import org.phonepe.phonepaywallet.entity.Transaction.TransactionStatus;
@@ -21,3 +22,28 @@ public class TransactionResponse {
     private TransactionStatus status;
 
 }
+=======
+package org.phonepe.phonepaywallet.dto;
+
+import org.phonepe.phonepaywallet.entity.Transaction.TransactionStatus;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.math.BigDecimal;
+import java.time.LocalDateTime;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+
+public class TransactionResponse {
+    private Long transactionId;
+    private String senderUpi;
+    private String receiverUpi;
+    private BigDecimal amount;
+    private LocalDateTime date;
+    private TransactionStatus status;
+
+}
+>>>>>>> 13f885410ec87aff487ddbc616477ee2dff81e9b

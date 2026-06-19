@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 package org.phonepe.phonepaywallet.repository;
 
 import org.phonepe.phonepaywallet.entity.User;
@@ -14,3 +15,21 @@ public interface UserRepository extends JpaRepository<User, Long> {
     boolean existsByUpiId(String upiId);
 }
 
+=======
+package org.phonepe.phonepaywallet.repository;
+
+import org.phonepe.phonepaywallet.entity.User;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import java.util.Optional;
+
+@Repository
+public interface UserRepository extends JpaRepository<User, Long> {
+    Optional<User> findByPhoneNumber(String phoneNumber);
+    Optional<User> findByUpiId(String upiId);
+    boolean existsByPhoneNumber(String phoneNumber);
+    boolean existsByUpiId(String upiId);
+}
+
+>>>>>>> 13f885410ec87aff487ddbc616477ee2dff81e9b
